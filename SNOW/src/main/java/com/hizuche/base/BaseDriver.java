@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.Set;
 
 /**
- * @author hp
+ * @author May
  * @date 2018/9/20 15:40
  * BaseDriver类，定义了带参的构造方法,selectDriver方法，根据传入的参数对浏览器进行选择，并定义浏览器初始化、关闭等
  */
@@ -20,14 +20,14 @@ public class BaseDriver {
 
     /**
      * 根据传入的字符串，选择浏览器
-     * @param browser_1  传入的浏览器名称
+     * @param browser  传入的浏览器名称
      * @return 返还具体的浏览器驱动
      */
-    public WebDriver selectDriver(String browser_1) {
-        if (browser_1.equalsIgnoreCase("firefox")) {
+    public WebDriver selectDriver(String browser) {
+        if (browser.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", "/Library/Selenium Webdriver/geckodriver");
             return new FirefoxDriver();
-        } else if (browser_1.equalsIgnoreCase("chrome")) {
+        } else if (browser.equalsIgnoreCase("chrome")) {
             System.setProperty("webdriver.chrome.driver", "/Library/Selenium Webdriver/chromedriver");
             return new ChromeDriver();
         }
@@ -43,7 +43,6 @@ public class BaseDriver {
         WebElement element = driver.findElement(elementLocate);
         return element;
     }
-
 
     /**
      * 为BaseDriver类定义get方法

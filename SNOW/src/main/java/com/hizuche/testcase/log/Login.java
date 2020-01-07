@@ -48,17 +48,17 @@ public class Login  {
      */
     @BeforeClass
     public void getHome() {
-        extentReports = new ExtentReports("/Library/SeleniumTestcase/SNOW/extentreports/report.html");
+        extentReports = new ExtentReports("/Users/fanlilin/workspace/snow/AutoUITestDemo/SNOW/extentreports/report.html");
         extentTest = extentReports.startTest("用户登陆");
-        driver.get("https://crms.hizuche.cn/");
+        driver.get("https://crms.hpzuche.cn/");
         try{
             Thread.sleep(4000);
         }
         catch (InterruptedException e){
             e.printStackTrace();
         }
-        extentTest.log(LogStatus.INFO,"opening LogIn page ...");
-        users = new ReadProperties("/Library/SeleniumTestcase/SNOW/src/Users.properties");
+        extentTest.log(LogStatus.INFO,"opening Login page ...");
+        users = new ReadProperties("/Users/fanlilin/workspace/snow/AutoUITestDemo/SNOW/src/Users.properties");
     }
 
     /**
@@ -69,7 +69,7 @@ public class Login  {
     public void testLogin() {
 
         loginAssert.logIn();
-        extentTest.log(LogStatus.INFO,"Log In ... ");
+        extentTest.log(LogStatus.INFO,"Login ... ");
         try{
             Thread.sleep(4000);
         }
@@ -94,13 +94,10 @@ public class Login  {
     /**
      * 用例运行结束后，关闭浏览器
      */
-
     @AfterClass
     public void closeBrowser(){
         driver.close();
         extentReports.endTest(extentTest);
         extentReports.flush();
     }
-
-
 }

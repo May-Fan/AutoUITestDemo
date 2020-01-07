@@ -19,7 +19,7 @@ public class LoginAssert {
     public LoginAssert(BaseDriver driver) {
         this.driver = driver;
         hph = new HomePageHandle(driver);
-        users = new ReadProperties("/Library/SeleniumTestcase/SNOW/src/Users.properties");
+        users = new ReadProperties("/Users/fanlilin/workspace/snow/AutoUITestDemo/SNOW/src/Users.properties");
     }
 
     /**
