@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [TestNGStudy]" guice-stage="DEVELOPMENT">
+  <test parallel="tests" name="TestNGDemo_2(failed)">
+    <classes>
+      <class name="com.hizuche.testcase.companycar.SearchComanyCar">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeClass"/>
+          <include name="testSearchCompanyCar"/>
+        </methods>
+      </class> <!-- com.hizuche.testcase.companycar.SearchComanyCar -->
+      <class name="com.hizuche.testcase.log.Login">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="getHome"/>
+        </methods>
+      </class> <!-- com.hizuche.testcase.log.Login -->
+    </classes>
+  </test> <!-- TestNGDemo_2(failed) -->
+</suite> <!-- Failed suite [TestNGStudy] -->
