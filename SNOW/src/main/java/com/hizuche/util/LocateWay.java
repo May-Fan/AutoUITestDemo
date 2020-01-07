@@ -15,7 +15,7 @@ public class LocateWay {
      */
     public static By getLocateWay(String key) {
 
-        ReadProperties property = new ReadProperties("/Library/SeleniumTestcase/SNOW/src/ElementLocate.properties");
+        ReadProperties property = new ReadProperties("/Users/fanlilin/workspace/snow/AutoUITestDemo/SNOW/src/ElementLocate.properties");
         /*构造一个新的ReadProperties对象，使用传入的元素名称key，调用该类中的getProperty方法*/
         String locator = property.getProperty(key);
         String locateWay = locator.split(">")[0]; //获取定位方式

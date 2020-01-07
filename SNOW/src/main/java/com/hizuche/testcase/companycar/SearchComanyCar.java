@@ -37,16 +37,16 @@ public class SearchComanyCar {
         companyCarPageBH = new CompanyCarPageBH(driver);
         Thread.sleep(2000);
 
-        extentReports2 = new ExtentReports("/Library/SeleniumTestcase/SNOW/extentreports/report.html");
+        extentReports2 = new ExtentReports("/Users/fanlilin/workspace/snow/AutoUITestDemo/SNOW/extentreports/report.html");
         extentTest2 = extentReports2.startTest("【车库车辆】搜索功能");
 
-        driver.get("https://crms.hizuche.cn/");
+        driver.get("https://crms.hpzuche.cn/");
         Thread.sleep(3000);
 
         loginAssert.logIn();
         Thread.sleep(2000);
 
-        driver.get("https://crms.hizuche.cn/inventory_cars");
+        driver.get("https://crms.hpzuche.cn/inventory_cars");
         extentTest2.log(LogStatus.INFO,"正在打开【车库车辆】页面...");
         Thread.sleep(500);
     }
